@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>John Doe | Full Stack Developer</title>
+  <meta name="description" content="Portfolio of John Doe, a Full Stack Developer specializing in building modern web applications.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS v4 CDN -->
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100 antialiased transition-colors duration-300">
+
+  <!-- Header & Navigation -->
+  <header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-gray-950/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <!-- Logo -->
+        <a href="#home" class="text-2xl font-bold tracking-tighter heading-font text-indigo-600 dark:text-indigo-400">JD.</a>
+        
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex space-x-8 items-center">
+          <a href="#home" class="nav-link text-sm font-medium hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Home</a>
+          <a href="#about" class="nav-link text-sm font-medium hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">About</a>
+          <a href="#skills" class="nav-link text-sm font-medium hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Skills</a>
+          <a href="#projects" class="nav-link text-sm font-medium hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Projects</a>
+          <a href="#experience" class="nav-link text-sm font-medium hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Experience</a>
+          
+          <div class="h-6 w-px bg-gray-300 dark:bg-gray-700"></div>
+          
+          <!-- Theme Toggle -->
+          <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" aria-label="Toggle Theme">
+            <i data-lucide="sun" class="w-5 h-5 hidden dark:block text-yellow-400"></i>
+            <i data-lucide="moon" class="w-5 h-5 block dark:hidden text-gray-700"></i>
+          </button>
+          
+          <!-- Let's Connect CTA -->
+          <a href="#contact" class="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold rounded-lg shadow-md hover:shadow-lg transition-all">
+            Let's Connect
+          </a>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <div class="flex md:hidden items-center gap-4">
+          <button id="mobile-theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors" aria-label="Toggle Theme">
+            <i data-lucide="sun" class="w-5 h-5 hidden dark:block text-yellow-400"></i>
+            <i data-lucide="moon" class="w-5 h-5 block dark:hidden text-gray-700"></i>
+          </button>
+          <button id="mobile-menu-btn" class="p-2 focus:outline-none" aria-label="Open Menu">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Menu -->
+    <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-white dark:bg-gray-950 border-b border-gray-200 dark:border-gray-800 shadow-lg">
+      <div class="flex flex-col px-4 pt-2 pb-6 space-y-4">
+        <a href="#home" class="mobile-nav-link text-lg font-medium py-2 border-b border-gray-100 dark:border-gray-800">Home</a>
+        <a href="#about" class="mobile-nav-link text-lg font-medium py-2 border-b border-gray-100 dark:border-gray-800">About</a>
+        <a href="#skills" class="mobile-nav-link text-lg font-medium py-2 border-b border-gray-100 dark:border-gray-800">Skills</a>
+        <a href="#projects" class="mobile-nav-link text-lg font-medium py-2 border-b border-gray-100 dark:border-gray-800">Projects</a>
+        <a href="#experience" class="mobile-nav-link text-lg font-medium py-2 border-b border-gray-100 dark:border-gray-800">Experience</a>
+        <a href="#contact" class="mobile-nav-link text-lg font-medium py-2 text-indigo-600 dark:text-indigo-400">Let's Connect</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-20 overflow-hidden relative">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-indigo-100/20 via-transparent to-transparent dark:from-indigo-900/20 z-0"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="reveal-left">
+            <p class="text-indigo-600 dark:text-indigo-400 font-medium mb-4 flex items-center gap-2">
+              <span class="w-8 h-px bg-indigo-600 dark:bg-indigo-400"></span>
+              Hi, I'm John Doe
+            </p>
+            <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6 heading-font">
+              Building digital <br>
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400">experiences</span>
+            </h1>
+            <p class="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-lg leading-relaxed">
+              A passionate Full Stack Developer specializing in creating modern, scalable web applications with elegant user interfaces and robust architectures.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a href="#projects" class="px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-semibold rounded-lg shadow-md hover:bg-gray-800 dark:hover:bg-gray-100 transition-all">
+                Explore My Work
+              </a>
+              <a href="#contact" class="px-6 py-3 border border-gray-300 dark:border-gray-700 hover:border-gray-900 dark:hover:border-white font-semibold rounded-lg transition-all flex items-center gap-2">
+                Get in Touch <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+            
+            <div class="mt-12 flex items-center gap-6">
+              <p class="text-sm text-gray-500 font-medium uppercase tracking-wider">Connect</p>
+              <div class="flex gap-4">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors" aria-label="GitHub"><i data-lucide="github" class="w-5 h-5"></i></a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors" aria-label="LinkedIn"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="reveal-right hidden lg:block relative">
+            <div class="absolute inset-0 bg-indigo-600 rounded-3xl translate-x-4 translate-y-4 opacity-20 blur-2xl"></div>
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="John Doe" class="rounded-3xl shadow-2xl object-cover h-[600px] w-full border border-gray-200 dark:border-gray-800 relative z-10">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white dark:bg-gray-900/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="reveal-up text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold heading-font mb-4">About Me</h2>
+          <div class="w-20 h-1 bg-indigo-600 mx-auto rounded-full"></div>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="reveal-left">
+            <h3 class="text-2xl font-bold heading-font mb-4">My Journey & Philosophy</h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+              I am a software engineer with over 5 years of experience building web applications. My journey started with a curiosity for how things work on the internet, which quickly evolved into a passion for coding.
+            </p>
+            <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+              I specialize in bridging the gap between design and engineering. My goal is to always build applications that are scalable and efficient under the hood while providing an intuitive, pixel-perfect user experience.
+            </p>
+            <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+              When I'm not coding, I'm usually reading about new tech trends, exploring open-source projects, or spending time outdoors seeking inspiration for my next build.
+            </p>
+          </div>
+          
+          <div class="reveal-right grid grid-cols-2 gap-6">
+            <div class="p-6 bg-gray-50 dark:bg-gray-800/50 rounded-2xl border border-gray-100 dark:border-gray-800">
+              <i data-lucide="code-2" class="w-8 h-8 text-indigo-600 dark:text-indigo-400 mb-4"></i>
+              <h4 class="text-xl font-bold heading-font mb-2">Clean Code</h4>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Maintainable, readable, and well-documented architecture.</p>
+            </div>
+            <div class="p-6 bg-gray-50 dark:bg-gray-800/50 rounded-2xl border border-gray-100 dark:border-gray-800">
+              <i data-lucide="layout" class="w-8 h-8 text-purple-600 dark:text-purple-400 mb-4"></i>
+              <h4 class="text-xl font-bold heading-font mb-2">Modern UI</h4>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Engaging, accessible, and responsive visual design.</p>
+            </div>
+            <div class="p-6 bg-gray-50 dark:bg-gray-800/50 rounded-2xl border border-gray-100 dark:border-gray-800">
+              <i data-lucide="zap" class="w-8 h-8 text-yellow-500 mb-4"></i>
+              <h4 class="text-xl font-bold heading-font mb-2">Performance</h4>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Optimized delivery for the fastest load times.</p>
+            </div>
+            <div class="p-6 bg-gray-50 dark:bg-gray-800/50 rounded-2xl border border-gray-100 dark:border-gray-800">
+              <i data-lucide="users" class="w-8 h-8 text-emerald-500 mb-4"></i>
+              <h4 class="text-xl font-bold heading-font mb-2">Team Player</h4>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Collaborative mindset with strong communication.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="reveal-up text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold heading-font mb-4">Technical Arsenal</h2>
+          <div class="w-20 h-1 bg-indigo-600 mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Category 1 -->
+          <div class="reveal-up bg-white dark:bg-gray-900 rounded-2xl p-8 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow">
+            <h3 class="text-xl font-bold heading-font mb-6 flex items-center gap-3">
+              <i data-lucide="monitor" class="text-indigo-500 w-6 h-6"></i> Frontend
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-sm font-medium rounded-full">HTML5 & CSS3</span>
+              <span class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-sm font-medium rounded-full">JavaScript (ES6+)</span>
+              <span class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-sm font-medium rounded-full">React & Next.js</span>
+              <span class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-sm font-medium rounded-full">Tailwind CSS</span>
+              <span class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-sm font-medium rounded-full">Framer Motion</span>
+            </div>
+          </div>
+          
+          <!-- Category 2 -->
+          <div class="reveal-up bg-white dark:bg-gray-900 rounded-2xl p-8 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow delay-100">
+            <h3 class="text-xl font-bold heading-font mb-6 flex items-center gap-3">
+              <i data-lucide="database" class="text-purple-500 w-6 h-6"></i> Backend
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-sm font-medium rounded-full">Node.js</span>
+              <span class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-sm font-medium rounded-full">Express</span>
+              <span class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-sm font-medium rounded-full">Python</span>
+              <span class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-sm font-medium rounded-full">PostgreSQL</span>
+              <span class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-sm font-medium rounded-full">MongoDB</span>
+            </div>
+          </div>
+          
+          <!-- Category 3 -->
+          <div class="reveal-up bg-white dark:bg-gray-900 rounded-2xl p-8 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow delay-200">
+            <h3 class="text-xl font-bold heading-font mb-6 flex items-center gap-3">
+              <i data-lucide="wrench" class="text-emerald-500 w-6 h-6"></i> Tools
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-sm font-medium rounded-full">Git & GitHub</span>
+              <span class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-sm font-medium rounded-full">Docker</span>
+              <span class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-sm font-medium rounded-full">AWS</span>
+              <span class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-sm font-medium rounded-full">Figma</span>
+              <span class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-sm font-medium rounded-full">Jest</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 bg-white dark:bg-gray-900/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="reveal-up text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold heading-font mb-4">Featured Work</h2>
+          <div class="w-20 h-1 bg-indigo-600 mx-auto rounded-full mb-8"></div>
+          
+          <!-- Filters -->
+          <div class="flex flex-wrap justify-center gap-3" id="project-filters">
+            <button class="filter-btn active px-4 py-2 rounded-full text-sm font-medium transition-colors bg-gray-900 text-white dark:bg-white dark:text-gray-900" data-filter="all">All</button>
+            <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-colors bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700" data-filter="web">Web App</button>
+            <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-colors bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700" data-filter="data">Data Viz</button>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+          
+          <!-- Project Card 1 -->
+          <div class="project-card reveal-up group bg-gray-50 dark:bg-gray-800/50 rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl transition-all duration-300" data-category="web">
+            <div class="relative h-60 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Finance Dashboard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold heading-font mb-2">FinTrack Dashboard</h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-2">A comprehensive financial dashboard providing real-time analytics, budgeting tools, and expense tracking for small businesses.</p>
+              <div class="flex gap-2 mb-6">
+                <span class="text-xs font-medium px-2 py-1 bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300 rounded">React</span>
+                <span class="text-xs font-medium px-2 py-1 bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300 rounded">Node.js</span>
+              </div>
+              <div class="flex gap-4">
+                <a href="#" class="text-sm font-semibold flex items-center gap-1 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i data-lucide="external-link" class="w-4 h-4"></i> Live Demo</a>
+                <a href="#" class="text-sm font-semibold flex items-center gap-1 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i data-lucide="github" class="w-4 h-4"></i> Source</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 2 -->
+          <div class="project-card reveal-up group bg-gray-50 dark:bg-gray-800/50 rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl transition-all duration-300 delay-100" data-category="web">
+            <div class="relative h-60 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="E-Commerce Platform" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold heading-font mb-2">Nova E-Commerce</h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-2">A headless e-commerce solution with a custom CMS, Stripe integration, and optimized conversion funnels.</p>
+              <div class="flex gap-2 mb-6">
+                <span class="text-xs font-medium px-2 py-1 bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300 rounded">Next.js</span>
+                <span class="text-xs font-medium px-2 py-1 bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300 rounded">Tailwind</span>
+              </div>
+              <div class="flex gap-4">
+                <a href="#" class="text-sm font-semibold flex items-center gap-1 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i data-lucide="external-link" class="w-4 h-4"></i> Live Demo</a>
+                <a href="#" class="text-sm font-semibold flex items-center gap-1 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i data-lucide="github" class="w-4 h-4"></i> Source</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 3 -->
+          <div class="project-card reveal-up group bg-gray-50 dark:bg-gray-800/50 rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl transition-all duration-300 delay-200" data-category="data">
+            <div class="relative h-60 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Data Analytics" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold heading-font mb-2">ClimateViz</h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-2">Interactive data visualization tool mapping global climate changes over the last 50 years using public datasets.</p>
+              <div class="flex gap-2 mb-6">
+                <span class="text-xs font-medium px-2 py-1 bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300 rounded">Python</span>
+                <span class="text-xs font-medium px-2 py-1 bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300 rounded">D3.js</span>
+              </div>
+              <div class="flex gap-4">
+                <a href="#" class="text-sm font-semibold flex items-center gap-1 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"><i data-lucide="github" class="w-4 h-4"></i> Source</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-24">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="reveal-up text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold heading-font mb-4">Experience</h2>
+          <div class="w-20 h-1 bg-indigo-600 mx-auto rounded-full"></div>
+        </div>
+
+        <div class="relative border-l border-gray-200 dark:border-gray-800 ml-3 md:ml-0">
+          
+          <!-- Experience Item 1 -->
+          <div class="reveal-up mb-12 ml-8 relative">
+            <div class="absolute -left-[41px] top-1 h-5 w-5 rounded-full bg-white dark:bg-gray-950 border-4 border-indigo-600"></div>
+            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
+              <h3 class="text-xl font-bold heading-font text-gray-900 dark:text-white">Senior Frontend Developer</h3>
+              <span class="text-sm font-medium text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-900/30 px-3 py-1 rounded-full w-max mt-2 md:mt-0">2022 - Present</span>
+            </div>
+            <h4 class="text-md font-medium text-gray-500 dark:text-gray-400 mb-4">TechNova Solutions</h4>
+            <p class="text-gray-600 dark:text-gray-400 mb-4 text-sm leading-relaxed">
+              Led the migration of a monolithic frontend to a micro-frontend architecture, improving load times by 40%. Mentored junior developers and instituted comprehensive code review guidelines.
+            </p>
+          </div>
+
+          <!-- Experience Item 2 -->
+          <div class="reveal-up mb-12 ml-8 relative">
+            <div class="absolute -left-[41px] top-1 h-5 w-5 rounded-full bg-white dark:bg-gray-950 border-4 border-indigo-600"></div>
+            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
+              <h3 class="text-xl font-bold heading-font text-gray-900 dark:text-white">Full Stack Developer</h3>
+              <span class="text-sm font-medium text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full w-max mt-2 md:mt-0">2019 - 2022</span>
+            </div>
+            <h4 class="text-md font-medium text-gray-500 dark:text-gray-400 mb-4">Creative Cloud Inc.</h4>
+            <p class="text-gray-600 dark:text-gray-400 mb-4 text-sm leading-relaxed">
+              Developed and maintained RESTful APIs used by over 50,000 active users. Built internal tooling that automated monthly reporting processes, saving 15 hours of manual work per month.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-indigo-600 dark:bg-indigo-900/30 text-white relative overflow-hidden">
+      <!-- Decorative background -->
+      <div class="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+      
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <div class="reveal-up">
+          <h2 class="text-3xl md:text-5xl font-bold heading-font mb-6">Let's Connect and Build Something Great.</h2>
+          <p class="text-indigo-100 dark:text-indigo-200 text-lg mb-12 max-w-2xl mx-auto">
+            I am currently open to new opportunities, freelance projects, and collaborations. Choose your preferred method to reach out.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 reveal-up">
+          
+          <!-- Email -->
+          <a href="mailto:hello@johndoe.com" class="group flex flex-col items-center p-6 bg-white/10 hover:bg-white/20 border border-white/20 rounded-2xl backdrop-blur-sm transition-all focus:outline-none focus:ring-2 focus:ring-white">
+            <div class="w-12 h-12 bg-white text-indigo-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <i data-lucide="mail" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold heading-font mb-1 text-white">Email</h3>
+            <p class="text-xs text-indigo-100">hello@johndoe.com</p>
+          </a>
+          
+          <!-- Phone -->
+          <a href="tel:+1234567890" class="group flex flex-col items-center p-6 bg-white/10 hover:bg-white/20 border border-white/20 rounded-2xl backdrop-blur-sm transition-all focus:outline-none focus:ring-2 focus:ring-white">
+            <div class="w-12 h-12 bg-white text-indigo-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <i data-lucide="phone" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold heading-font mb-1 text-white">Phone</h3>
+            <p class="text-xs text-indigo-100">+1 (234) 567-890</p>
+          </a>
+
+          <!-- WhatsApp -->
+          <a href="https://wa.me/1234567890?text=Hi%20John,%20I%20saw%20your%20portfolio!" target="_blank" rel="noopener noreferrer" class="group flex flex-col items-center p-6 bg-white/10 hover:bg-white/20 border border-white/20 rounded-2xl backdrop-blur-sm transition-all focus:outline-none focus:ring-2 focus:ring-white">
+            <div class="w-12 h-12 bg-white text-indigo-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <i data-lucide="message-circle" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold heading-font mb-1 text-white">WhatsApp</h3>
+            <p class="text-xs text-indigo-100">Direct Message</p>
+          </a>
+
+          <!-- LinkedIn -->
+          <a href="https://linkedin.com/in/johndoe" target="_blank" rel="noopener noreferrer" class="group flex flex-col items-center p-6 bg-white/10 hover:bg-white/20 border border-white/20 rounded-2xl backdrop-blur-sm transition-all focus:outline-none focus:ring-2 focus:ring-white">
+            <div class="w-12 h-12 bg-white text-indigo-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <i data-lucide="linkedin" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold heading-font mb-1 text-white">LinkedIn</h3>
+            <p class="text-xs text-indigo-100">Connect Professionally</p>
+          </a>
+          
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-50 dark:bg-gray-950 border-t border-gray-200 dark:border-gray-900 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        
+        <div class="flex flex-col items-center md:items-start">
+          <span class="text-2xl font-bold tracking-tighter heading-font text-indigo-600 dark:text-indigo-400 mb-2">JD.</span>
+          <p class="text-sm text-gray-500 dark:text-gray-400">Designed & built with focus and intent.</p>
+        </div>
+        
+        <div class="flex gap-4">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="p-2 bg-gray-200 dark:bg-gray-800 rounded-full text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-white transition-colors" aria-label="GitHub">
+            <i data-lucide="github" class="w-4 h-4"></i>
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="p-2 bg-gray-200 dark:bg-gray-800 rounded-full text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-white transition-colors" aria-label="Twitter">
+            <i data-lucide="twitter" class="w-4 h-4"></i>
+          </a>
+        </div>
+        
+      </div>
+      
+      <div class="mt-8 pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-sm text-gray-500 dark:text-gray-400">
+          &copy; <span id="year"></span> John Doe. All rights reserved.
+        </p>
+        
+        <button id="back-to-top" class="flex items-center gap-2 text-sm font-medium text-gray-500 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors focus:outline-none">
+          Back to top <i data-lucide="arrow-up" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
