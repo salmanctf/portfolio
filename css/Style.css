@@ -1,0 +1,72 @@
+/* Custom CSS properties for fonts */
+:root {
+  --font-body: "Inter", sans-serif;
+  --font-heading: "Space Grotesk", sans-serif;
+}
+
+/* Base Font Applications */
+body {
+  font-family: var(--font-body);
+}
+
+.heading-font {
+  font-family: var(--font-heading);
+}
+
+/* Scrollbar Styling (Optional, for premium feel) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+/* Active Nav Link Styling */
+.nav-link.active-nav {
+  color: #4f46e5; /* Tailwind indigo-600 */
+}
+.dark .nav-link.active-nav {
+  color: #818cf8; /* Tailwind indigo-400 */
+}
+
+/* Scroll Reveal Animations */
+.reveal-up, .reveal-left, .reveal-right {
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-up {
+  transform: translateY(30px);
+}
+.reveal-left {
+  transform: translateX(-30px);
+}
+.reveal-right {
+  transform: translateX(30px);
+}
+
+.reveal-up.active, 
+.reveal-left.active, 
+.reveal-right.active {
+  opacity: 1;
+  transform: translate(0);
+}
+
+/* Respect Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-up, .reveal-left, .reveal-right {
+    transition: none;
+    transform: none;
+    opacity: 1;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
